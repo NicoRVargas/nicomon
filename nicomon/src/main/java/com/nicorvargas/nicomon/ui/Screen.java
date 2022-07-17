@@ -11,30 +11,45 @@ public class Screen extends JFrame {
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
-		setResizable(false);
+		setResizable(true);
 
-		JButton attack = new JButton("Attack");
-		attack.setBounds(550, 480, 100, 50);
-		attack.setFont(new Font("Default", Font.PLAIN, 15));
+		ImageIcon buttonfight = new ImageIcon("D:\\development\\java-progams\\nicomon\\src\\main\\resources\\fightbutton.png");
+		ImageIcon buttonforfeit = new ImageIcon("D:\\development\\java-progams\\nicomon\\src\\main\\resources\\forfeitbutton.png");
+		ImageIcon buttonbag = new ImageIcon("D:\\development\\java-progams\\nicomon\\src\\main\\resources\\bagbutton.png");
+		ImageIcon buttonnicomon = new ImageIcon("D:\\development\\java-progams\\nicomon\\src\\main\\resources\\nicomonbutton.png");
+
+		JButton attack = new JButton();
+		attack.setBounds(645, 617, 203, 96);
+		attack.setBackground(Color.white);
+
+		JButton bag = new JButton();
+		bag.setBounds(645, 717, 203, 96);
+		bag.setBackground(Color.white);
+
+		JButton nicomon = new JButton();
+		nicomon.setBounds(855, 617, 203, 96);
+		nicomon.setBackground(Color.white);
+
+		JButton forfeit = new JButton();
+		forfeit.setBounds(855, 717, 203, 96);
+		forfeit.setBackground(Color.white);
+
+		attack.setIcon(buttonfight);
 		add(attack);
 
-		JButton bag = new JButton("Bag");
-		bag.setBounds(700, 480, 100, 50);
-		bag.setFont(new Font("Default", Font.PLAIN, 15));
+		bag.setIcon(buttonbag);
 		add(bag);
 
-		JButton nicomon = new JButton("Nicomon");
-		nicomon.setBounds(550, 560, 100, 50);
-		nicomon.setFont(new Font("Default", Font.PLAIN, 15));
+		nicomon.setIcon(buttonnicomon);
 		add(nicomon);
 
-		JButton forfeit = new JButton("Forfeit");
-		forfeit.setBounds(700, 560, 100, 50);
-		forfeit.setFont(new Font("Default", Font.PLAIN, 15));
+		forfeit.setIcon(buttonforfeit);
 		add(forfeit);
+
 
 		ImageIcon icon = new ImageIcon("D:\\development\\java-progams\\nicomon\\src\\main\\resources\\icon.png");
 		setIconImage(icon.getImage());
+
 
 		ImageIcon background = new ImageIcon("D:\\development\\java-progams\\nicomon\\src\\main\\resources\\nicomonbackbattleaction.png");
 		JLabel label = new JLabel();
